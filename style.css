@@ -129,27 +129,34 @@ header {
     );
 }
 
-/* projects dino */
+/* projects header */
 
-#projects {
+.projects-header {
 
-    position: relative;
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 35px;
 }
 
+.projects-header h2 {
+
+    margin-bottom: 0;
+}
+
+/* projects dino */
+
 .projects-dino {
-
-    position: absolute;
-
-    top: 70px;
-
-    right: 40px;
 
     animation: floaty 4s ease-in-out infinite;
 }
 
 .projects-dino img {
 
-    width: 85px;
+    width: 70px;
 
     image-rendering: pixelated;
 
@@ -539,20 +546,14 @@ footer {
         width: 75px;
     }
 
-    .projects-dino {
+    .projects-header {
 
-        position: relative;
-
-        top: auto;
-
-        right: auto;
-
-        margin-bottom: 25px;
+        justify-content: center;
     }
 
     .projects-dino img {
 
-        width: 70px;
+        width: 55px;
     }
 
     .contact-dino {
