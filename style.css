@@ -11,6 +11,10 @@ body {
 header {
     padding: 70px 40px;
     border-bottom: 1px solid #2d2d2d;
+
+    position: relative;
+
+    overflow: hidden;
 }
 
 .header-content {
@@ -62,6 +66,47 @@ header {
 
 .header-image img:hover {
     transform: scale(1.02);
+}
+
+/* dino sprite */
+
+.dino-sprite {
+
+    position: absolute;
+
+    top: 140px;
+
+    right: 260px;
+
+    animation: floaty 4s ease-in-out infinite;
+
+    z-index: 2;
+}
+
+.dino-sprite img {
+
+    width: 90px;
+
+    image-rendering: pixelated;
+
+    filter: drop-shadow(
+        0px 0px 10px rgba(34, 197, 94, 0.35)
+    );
+}
+
+@keyframes floaty {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 /* buttons */
@@ -367,5 +412,19 @@ footer {
 
     .header-text h1 {
         font-size: 48px;
+    }
+
+    .dino-sprite {
+
+        top: 520px;
+
+        right: 50%;
+
+        transform: translateX(50%);
+    }
+
+    .dino-sprite img {
+
+        width: 75px;
     }
 }
