@@ -68,19 +68,15 @@ header {
     transform: scale(1.02);
 }
 
-/* dino sprite */
+/* dinos */
 
 .dino-sprite {
 
     position: absolute;
 
-    top: 140px;
-
-    right: 260px;
+    z-index: 2;
 
     animation: floaty 4s ease-in-out infinite;
-
-    z-index: 2;
 }
 
 .dino-sprite img {
@@ -88,9 +84,61 @@ header {
     width: 90px;
 
     image-rendering: pixelated;
+}
+
+/* green dino */
+
+.green-dino {
+
+    top: 140px;
+
+    right: 260px;
+}
+
+.green-dino img {
 
     filter: drop-shadow(
         0px 0px 10px rgba(34, 197, 94, 0.35)
+    );
+}
+
+/* red dino */
+
+.red-dino {
+
+    top: 340px;
+
+    left: 120px;
+
+    animation-delay: 1s;
+}
+
+.red-dino img {
+
+    width: 80px;
+
+    filter: drop-shadow(
+        0px 0px 10px rgba(239, 68, 68, 0.35)
+    );
+}
+
+/* yellow dino */
+
+.yellow-dino {
+
+    top: 90px;
+
+    left: 48%;
+
+    animation-delay: 2s;
+}
+
+.yellow-dino img {
+
+    width: 75px;
+
+    filter: drop-shadow(
+        0px 0px 10px rgba(250, 204, 21, 0.35)
     );
 }
 
@@ -271,8 +319,6 @@ h2 {
     background-color: #252525;
 }
 
-/* accent colors for project cards */
-
 .green-card {
     border-left: 6px solid #22c55e;
 }
@@ -350,6 +396,11 @@ h2 {
 /* contact section */
 
 .contact-card {
+
+    position: relative;
+
+    overflow: hidden;
+
     background-color: #1f1f1f;
 
     border: 1px solid #2e2e2e;
@@ -397,6 +448,32 @@ h2 {
     color: #a855f7;
 }
 
+/* contact dino */
+
+.contact-dino {
+
+    position: absolute;
+
+    right: 40px;
+
+    bottom: 20px;
+
+    animation: floaty 4s ease-in-out infinite;
+}
+
+.contact-dino img {
+
+    width: 110px;
+
+    image-rendering: pixelated;
+
+    transform: scaleX(-1);
+
+    filter: drop-shadow(
+        0px 0px 10px rgba(59, 130, 246, 0.35)
+    );
+}
+
 /* footer */
 
 footer {
@@ -429,7 +506,7 @@ footer {
         font-size: 48px;
     }
 
-    .dino-sprite {
+    .green-dino {
 
         top: 520px;
 
@@ -438,8 +515,27 @@ footer {
         transform: translateX(50%);
     }
 
-    .dino-sprite img {
+    .red-dino,
+    .yellow-dino {
 
-        width: 75px;
+        display: none;
+    }
+
+    .contact-dino {
+
+        position: relative;
+
+        right: auto;
+
+        bottom: auto;
+
+        margin-top: 30px;
+
+        text-align: center;
+    }
+
+    .contact-dino img {
+
+        width: 90px;
     }
 }
