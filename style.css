@@ -6,7 +6,7 @@ body {
     padding: 0;
 }
 
-/* HEADER */
+/* header */
 
 header {
     padding: 70px 40px;
@@ -40,7 +40,7 @@ header {
     line-height: 1.5;
 }
 
-/* PROFILE IMAGE */
+/* profile image */
 
 .header-image img {
     width: 380px;
@@ -64,7 +64,7 @@ header {
     transform: scale(1.02);
 }
 
-/* BUTTONS */
+/* buttons */
 
 .links {
     margin-top: 35px;
@@ -97,7 +97,7 @@ header {
     transform: translateY(-2px);
 }
 
-/* SECTIONS */
+/* sections */
 
 section {
     padding: 70px 40px;
@@ -111,7 +111,7 @@ h2 {
     color: #ffffff;
 }
 
-/* ABOUT */
+/* about section */
 
 #about p {
     font-size: 18px;
@@ -119,7 +119,7 @@ h2 {
     color: #c0c0c0;
 }
 
-/* PROJECTS */
+/* project cards */
 
 .project-card {
     background-color: #1f1f1f;
@@ -141,7 +141,7 @@ h2 {
     background-color: #252525;
 }
 
-/* PROJECT ACCENT COLORS */
+/* accent colors for project cards */
 
 .green-card {
     border-left: 6px solid #22c55e;
@@ -159,7 +159,7 @@ h2 {
     border-left: 6px solid #f97316;
 }
 
-/* PROJECT IMAGES */
+/* project images */
 
 .project-image {
     width: 100%;
@@ -217,7 +217,7 @@ h2 {
     background-color: #4a4a4a;
 }
 
-/* FOOTER */
+/* footer */
 
 footer {
     text-align: center;
@@ -231,7 +231,7 @@ footer {
     margin-top: 40px;
 }
 
-/* MOBILE */
+/* mobile view */
 
 @media (max-width: 900px) {
 
@@ -248,4 +248,74 @@ footer {
     .header-text h1 {
         font-size: 48px;
     }
+}
+
+/* contact section */
+
+.contact-card {
+
+    background-color: #1f1f1f;
+
+    border: 1px solid #2e2e2e;
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    transition: 0.25s ease;
+}
+
+.contact-card:hover {
+
+    background-color: #252525;
+
+    transform: translateY(-4px);
+}
+
+.contact-card p {
+
+    color: #c0c0c0;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+
+    font-size: 18px;
+}
+
+.contact-links {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+.contact-links a {
+
+    display: inline-block;
+
+    background-color: #2d2d2d;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid #3a3a3a;
+
+    transition: 0.2s ease;
+
+    font-weight: bold;
+}
+
+.contact-links a:hover {
+
+    background-color: #404040;
+
+    transform: translateY(-2px);
 }
