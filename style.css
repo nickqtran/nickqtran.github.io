@@ -35,6 +35,10 @@ header {
     font-size: 64px;
     margin-bottom: 15px;
     color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
 
 .subtitle {
@@ -68,74 +72,57 @@ header {
     transform: scale(1.02);
 }
 
-/* dinos */
+/* title dino */
 
-.dino-sprite {
+.title-dino {
 
-    position: absolute;
-
-    z-index: 2;
+    display: flex;
+    align-items: center;
 
     animation: floaty 4s ease-in-out infinite;
 }
 
-.dino-sprite img {
+.title-dino img {
 
-    width: 90px;
+    width: 80px;
 
     image-rendering: pixelated;
-}
-
-/* green dino */
-
-.green-dino {
-
-    top: 140px;
-
-    right: 260px;
-}
-
-.green-dino img {
 
     filter: drop-shadow(
         0px 0px 10px rgba(34, 197, 94, 0.35)
     );
 }
 
-/* red dino */
-
-.red-dino {
-
-    top: 340px;
-
-    left: 120px;
-
-    animation-delay: 1s;
-}
-
-.red-dino img {
-
-    width: 80px;
-
-    filter: drop-shadow(
-        0px 0px 10px rgba(239, 68, 68, 0.35)
-    );
-}
-
 /* yellow dino */
+
+.about-wrapper {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 40px;
+}
+
+.about-content {
+
+    flex: 1;
+}
 
 .yellow-dino {
 
-    top: 90px;
-
-    left: 48%;
-
-    animation-delay: 2s;
+    animation: floaty 4s ease-in-out infinite;
 }
 
 .yellow-dino img {
 
-    width: 75px;
+    width: 90px;
+
+    image-rendering: pixelated;
+
+    transform: scaleX(-1);
 
     filter: drop-shadow(
         0px 0px 10px rgba(250, 204, 21, 0.35)
@@ -503,22 +490,24 @@ footer {
     }
 
     .header-text h1 {
+
         font-size: 48px;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
     }
 
-    .green-dino {
+    .about-wrapper {
 
-        top: 520px;
+        flex-direction: column;
 
-        right: 50%;
-
-        transform: translateX(50%);
+        text-align: center;
     }
 
-    .red-dino,
-    .yellow-dino {
+    .yellow-dino img {
 
-        display: none;
+        width: 75px;
     }
 
     .contact-dino {
