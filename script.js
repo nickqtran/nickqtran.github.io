@@ -1,3 +1,5 @@
+/* fade in project cards on scroll */
+
 const cards = document.querySelectorAll(".project-card");
 
 const observer = new IntersectionObserver((entries) => {
@@ -16,4 +18,22 @@ const observer = new IntersectionObserver((entries) => {
 
 cards.forEach((card) => {
     observer.observe(card);
+});
+
+/* subtle movement for dinos */
+
+document.addEventListener("mousemove", (event) => {
+
+    const dinos = document.querySelectorAll(
+        ".title-dino, .yellow-dino, .contact-dino"
+    );
+
+    const x = (window.innerWidth / 2 - event.clientX) / 90;
+    const y = (window.innerHeight / 2 - event.clientY) / 90;
+
+    dinos.forEach((dino) => {
+
+        dino.style.transform =
+            `translate(${x}px, ${y}px)`;
+    });
 });

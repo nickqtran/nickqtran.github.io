@@ -4,6 +4,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+
+    overflow-x: hidden;
 }
 
 /* header */
@@ -93,15 +95,14 @@ header {
     );
 }
 
-/* projects header */
+/* projects section */
+
+#projects {
+
+    position: relative;
+}
 
 .projects-header {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 16px;
 
     margin-bottom: 35px;
 }
@@ -110,25 +111,31 @@ header {
 
 .yellow-dino {
 
-    display: flex;
+    position: absolute;
 
-    align-items: center;
+    right: 120px;
 
-    animation: floaty 4s ease-in-out infinite;
+    top: -10px;
+
+    animation:
+        floaty 4s ease-in-out infinite,
+        glowPulse 3s ease-in-out infinite;
 }
 
 .yellow-dino img {
 
-    width: 70px;
+    width: 78px;
 
     image-rendering: pixelated;
 
-    transform: scaleX(-1) translateY(2px);
+    transform: scaleX(-1);
 
     filter: drop-shadow(
-        0px 0px 10px rgba(250, 204, 21, 0.35)
+        0px 0px 10px rgba(250, 204, 21, 0.45)
     );
 }
+
+/* animations */
 
 @keyframes floaty {
 
@@ -142,6 +149,21 @@ header {
 
     100% {
         transform: translateY(0px);
+    }
+}
+
+@keyframes glowPulse {
+
+    0% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.25);
+    }
+
+    100% {
+        filter: brightness(1);
     }
 }
 
@@ -290,7 +312,8 @@ h2 {
     transition:
         opacity 0.8s ease,
         transform 0.8s ease,
-        background-color 0.25s ease;
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .project-card.show {
@@ -305,6 +328,9 @@ h2 {
     transform: translateY(-6px);
 
     background-color: #252525;
+
+    box-shadow:
+        0px 0px 20px rgba(255, 255, 255, 0.04);
 }
 
 .green-card {
@@ -446,7 +472,9 @@ h2 {
 
     bottom: 20px;
 
-    animation: floaty 4s ease-in-out infinite;
+    animation:
+        floaty 4s ease-in-out infinite,
+        glowPulse 3s ease-in-out infinite;
 }
 
 .contact-dino img {
@@ -499,14 +527,16 @@ footer {
         flex-wrap: wrap;
     }
 
-    .projects-header {
+    .yellow-dino {
 
-        justify-content: center;
+        right: 30px;
+
+        top: 10px;
     }
 
     .yellow-dino img {
 
-        width: 55px;
+        width: 58px;
     }
 
     .contact-dino {
