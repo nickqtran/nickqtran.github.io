@@ -137,7 +137,7 @@ header {
 
     align-items: center;
 
-    gap: 18px;
+    gap: 8px;
 
     margin-bottom: 35px;
 }
@@ -151,14 +151,20 @@ header {
 
 .projects-dino {
 
+    display: flex;
+
+    align-items: center;
+
     animation: floaty 4s ease-in-out infinite;
 }
 
 .projects-dino img {
 
-    width: 70px;
+    width: 58px;
 
     image-rendering: pixelated;
+
+    transform: translateY(2px);
 
     filter: drop-shadow(
         0px 0px 10px rgba(239, 68, 68, 0.35)
@@ -553,7 +559,7 @@ footer {
 
     .projects-dino img {
 
-        width: 55px;
+        width: 50px;
     }
 
     .contact-dino {
