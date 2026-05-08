@@ -129,6 +129,35 @@ header {
     );
 }
 
+/* projects dino */
+
+#projects {
+
+    position: relative;
+}
+
+.projects-dino {
+
+    position: absolute;
+
+    top: 70px;
+
+    right: 40px;
+
+    animation: floaty 4s ease-in-out infinite;
+}
+
+.projects-dino img {
+
+    width: 85px;
+
+    image-rendering: pixelated;
+
+    filter: drop-shadow(
+        0px 0px 10px rgba(239, 68, 68, 0.35)
+    );
+}
+
 @keyframes floaty {
 
     0% {
@@ -508,6 +537,22 @@ footer {
     .yellow-dino img {
 
         width: 75px;
+    }
+
+    .projects-dino {
+
+        position: relative;
+
+        top: auto;
+
+        right: auto;
+
+        margin-bottom: 25px;
+    }
+
+    .projects-dino img {
+
+        width: 70px;
     }
 
     .contact-dino {
