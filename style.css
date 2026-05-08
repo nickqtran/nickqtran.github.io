@@ -247,10 +247,25 @@ h2 {
 
     border: 1px solid #2e2e2e;
 
-    transition: 0.25s ease;
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        background-color 0.25s ease;
+}
+
+.project-card.show {
+
+    opacity: 1;
+
+    transform: translateY(0px);
 }
 
 .project-card:hover {
+
     transform: translateY(-6px);
 
     background-color: #252525;
