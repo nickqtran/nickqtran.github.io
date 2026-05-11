@@ -2,13 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Nicholas Tran</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- navbar -->
+
+    <nav class="navbar">
+
+        <div class="nav-logo">
+            Nicholas Tran
+        </div>
+
+        <div class="nav-links">
+
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+    <!-- header -->
 
     <header>
 
@@ -67,6 +90,8 @@
 
     </header>
 
+    <!-- about -->
+
     <section id="about">
 
         <div class="about-wrapper">
@@ -79,7 +104,14 @@
                     I am a Computer Science student at the University of Nebraska Omaha
                     with a concentration in Software Engineering and a minor in Mathematics.
                     I enjoy building applications related to web development, gaming,
-                    and software systems.
+                    backend systems, and interactive software experiences.
+                </p>
+
+                <p>
+                    My interests include full-stack development, UI/UX design,
+                    software architecture, and collaborative team-based projects.
+                    I also enjoy creating digital content and editing videos using
+                    DaVinci Resolve.
                 </p>
 
             </div>
@@ -87,6 +119,73 @@
         </div>
 
     </section>
+
+    <!-- skills -->
+
+    <section id="skills">
+
+        <h2>Skills & Technologies</h2>
+
+        <div class="skills-container">
+
+            <div class="skill-category">
+
+                <h3>Languages</h3>
+
+                <div class="skill-tags">
+
+                    <span>Java</span>
+                    <span>Python</span>
+                    <span>C</span>
+                    <span>JavaScript</span>
+                    <span>SQL</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+
+                </div>
+
+            </div>
+
+            <div class="skill-category">
+
+                <h3>Frameworks & Tools</h3>
+
+                <div class="skill-tags">
+
+                    <span>JavaFX</span>
+                    <span>Flask</span>
+                    <span>Supabase</span>
+                    <span>Git/GitHub</span>
+                    <span>Maven</span>
+                    <span>Jest</span>
+                    <span>AWS</span>
+                    <span>VS Code</span>
+
+                </div>
+
+            </div>
+
+            <div class="skill-category">
+
+                <h3>Other Skills</h3>
+
+                <div class="skill-tags">
+
+                    <span>Database Design</span>
+                    <span>REST APIs</span>
+                    <span>UI/UX Design</span>
+                    <span>Agile Collaboration</span>
+                    <span>Video Editing</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- projects -->
 
     <section id="projects">
 
@@ -103,6 +202,8 @@
 
         </div>
 
+        <!-- SubTracked -->
+
         <div class="project-card green-card">
 
             <img src="assets/images/subtracked.png"
@@ -111,11 +212,24 @@
 
             <h3>SubTracked</h3>
 
-            <p>
-                A secure web application that allows users to track recurring
-                expenses, visualize monthly spending, and manage subscription
-                cycles in one centralized dashboard.
-            </p>
+            <ul>
+
+                <li>
+                    Developed a subscription tracking web application
+                    using Supabase and PostgreSQL.
+                </li>
+
+                <li>
+                    Implemented authentication, recurring payment tracking,
+                    and guest-mode support using localStorage.
+                </li>
+
+                <li>
+                    Collaborated in an Agile-style team environment
+                    using GitHub and Discord workflows.
+                </li>
+
+            </ul>
 
             <p>
                 <strong>Technologies:</strong>
@@ -130,6 +244,8 @@
 
         </div>
 
+        <!-- Whisper -->
+
         <div class="project-card red-card">
 
             <img src="assets/images/transcriber.png"
@@ -138,9 +254,23 @@
 
             <h3>Whisper Transcriber</h3>
 
-            <p>
-                A local program that converts audio files into text format.
-            </p>
+            <ul>
+
+                <li>
+                    Created a local speech-to-text application that converts
+                    audio files into readable text.
+                </li>
+
+                <li>
+                    Integrated OpenAI Whisper transcription capabilities
+                    into a lightweight desktop workflow.
+                </li>
+
+                <li>
+                    Focused on accessibility and simplified media processing.
+                </li>
+
+            </ul>
 
             <p>
                 <strong>Technologies:</strong>
@@ -155,6 +285,8 @@
 
         </div>
 
+        <!-- polygons -->
+
         <div class="project-card purple-card">
 
             <img src="assets/images/polygons.png"
@@ -163,10 +295,24 @@
 
             <h3>Polygons in Space</h3>
 
-            <p>
-                A 2D arcade-style space shooter built using a custom JavaScript
-                game engine.
-            </p>
+            <ul>
+
+                <li>
+                    Developed a 2D arcade-style space shooter using
+                    a custom JavaScript game engine.
+                </li>
+
+                <li>
+                    Implemented player movement, enemy AI,
+                    collision systems, and scoring mechanics.
+                </li>
+
+                <li>
+                    Designed gameplay systems focused on responsiveness
+                    and replayability.
+                </li>
+
+            </ul>
 
             <p>
                 <strong>Technologies:</strong>
@@ -181,6 +327,8 @@
 
         </div>
 
+        <!-- gallery -->
+
         <div class="project-card orange-card">
 
             <img src="assets/images/galleryapp.png"
@@ -189,14 +337,28 @@
 
             <h3>Photo Gallery App</h3>
 
-            <p>
-                A cloud-based photo gallery web application designed to provide
-                image storage and management.
-            </p>
+            <ul>
+
+                <li>
+                    Built a cloud-based image gallery application
+                    for storing and managing uploaded photos.
+                </li>
+
+                <li>
+                    Integrated AWS cloud services to support
+                    scalable image hosting and storage.
+                </li>
+
+                <li>
+                    Worked collaboratively on frontend functionality
+                    and application structure.
+                </li>
+
+            </ul>
 
             <p>
                 <strong>Technologies:</strong>
-                Amazon Web Services (AWS), JavaScript, HTML, CSS
+                AWS, JavaScript, HTML, CSS
             </p>
 
             <a href="https://github.com/nickqtran/CSCI4650Group6"
@@ -209,6 +371,8 @@
 
     </section>
 
+    <!-- contact -->
+
     <section id="contact">
 
         <h2>Contact</h2>
@@ -216,14 +380,15 @@
         <div class="contact-card">
 
             <p>
-                Feel free to reach out for collaboration, opportunities,
-                or general inquiries.
+                Feel free to reach out for collaboration,
+                opportunities, or general inquiries.
             </p>
 
             <div class="contact-info">
 
                 <p>
                     <strong>University Email:</strong>
+
                     <a href="mailto:nicholastran@unomaha.edu">
                         nicholastran@unomaha.edu
                     </a>
@@ -231,15 +396,9 @@
 
                 <p>
                     <strong>Professional Email:</strong>
+
                     <a href="mailto:nicholastran088@gmail.com">
                         nicholastran088@gmail.com
-                    </a>
-                </p>
-
-                <p>
-                    <strong>Phone:</strong>
-                    <a href="tel:4022105649">
-                        (402) 210-5649
                     </a>
                 </p>
 
@@ -256,8 +415,12 @@
 
     </section>
 
+    <!-- footer -->
+
     <footer>
+
         <p>© 2026 Nicholas Tran</p>
+
     </footer>
 
     <script src="script.js"></script>
