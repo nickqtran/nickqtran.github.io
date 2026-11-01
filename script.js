@@ -46,43 +46,53 @@ document.addEventListener("mousemove", (event) => {
 const photos = [
     {
         src: "assets/images/IMG_1021.jpeg",
-        alt: "Hollywood sign in Los Angeles, California"
+        alt: "Hollywood sign in Los Angeles, California",
+        caption: "Hollywood Sign - Los Angeles, CA"
     },
     {
         src: "assets/images/IMG_0833.jpeg",
-        alt: "Precious Moments Chapel by artist Samuel J. Butcher"
+        alt: "Precious Moments Chapel by artist Samuel J. Butcher",
+        caption: "Precious Moments Chapel - Carthage, MO"
     },
     {
         src: "assets/images/IMG_1226.jpeg",
-        alt: "Red panda at the Henry Doorly Zoo"
+        alt: "Red panda at the Henry Doorly Zoo",
+        caption: "Red Panda - Henry Doorly Zoo"
     },
     {
         src: "assets/images/IMG_1320.jpeg",
-        alt: "Chinese sanctuary garden in California"
+        alt: "Chinese sanctuary garden in California",
+        caption: "Chinese Sanctuary Garden - California"
     },
     {
         src: "assets/images/IMG_2138.jpeg",
-        alt: "Race cars at Raceway Park of the Midlands"
+        alt: "Race cars at Raceway Park of the Midlands",
+        caption: "Raceway Park of the Midlands"
     },
     {
         src: "assets/images/IMG_2677.jpeg",
-        alt: "Model for a photoshoot"
+        alt: "Model for a photoshoot",
+        caption: "Indoor Portrait Photoshoot"
     },
     {
         src: "assets/images/IMG_6438.jpeg",
-        alt: "Model for a photoshoot"
+        alt: "Model for a photoshoot",
+        caption: "Winter Portrait Photoshoot"
     },
     {
         src: "assets/images/IMG_2703.jpeg",
-        alt: "Night sky with stars"
+        alt: "Night sky with stars",
+        caption: "Night Sky Photography"
     },
     {
         src: "assets/images/IMG_2229.jpeg",
-        alt: "Supra at Raceway Park of the Midlands"
+        alt: "Supra at Raceway Park of the Midlands",
+        caption: "Toyota Supra - Raceway Park of the Midlands"
     },
     {
         src: "assets/images/IMG_1326.jpeg",
-        alt: "White flower at the Chinese sanctuary garden in California"
+        alt: "White flower at the Chinese sanctuary garden in California",
+        caption: "Nature Photography - Chinese Sanctuary Garden"
     }
 ];
 
@@ -90,6 +100,7 @@ let currentPhoto = 0;
 
 const slideshowImage = document.getElementById("slideshow-image");
 const photoCounter = document.getElementById("photo-counter");
+const photoCaption = document.getElementById("photo-caption");
 
 const previousButton = document.querySelector(".prev-photo");
 const nextButton = document.querySelector(".next-photo");
@@ -102,12 +113,14 @@ function showPhoto(index) {
     slideshowImage.src = photos[currentPhoto].src;
     slideshowImage.alt = photos[currentPhoto].alt;
 
+    photoCaption.textContent = photos[currentPhoto].caption;
+
     photoCounter.textContent =
         `${currentPhoto + 1} / ${photos.length}`;
 }
 
 
-if (slideshowImage && photoCounter && previousButton && nextButton) {
+if (slideshowImage && photoCounter && photoCaption && previousButton && nextButton) {
 
     previousButton.addEventListener("click", () => {
         showPhoto(currentPhoto - 1);
