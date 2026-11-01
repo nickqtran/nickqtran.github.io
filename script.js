@@ -1,4 +1,5 @@
-/* fade in project cards on scroll */
+
+/* fade in project cards when scrolling the page */
 
 const cards = document.querySelectorAll(".project-card");
 
@@ -20,7 +21,8 @@ cards.forEach((card) => {
     observer.observe(card);
 });
 
-/* subtle movement for dinos */
+
+/* subtle movement for the DINOSAURSSS */
 
 document.addEventListener("mousemove", (event) => {
 
@@ -37,3 +39,83 @@ document.addEventListener("mousemove", (event) => {
             `translate(${x}px, ${y}px)`;
     });
 });
+
+
+/* photography slideshow effect */
+
+const photos = [
+    {
+        src: "assets/images/IMG_1021.jpeg",
+        alt: "Hollywood sign in Los Angeles, California"
+    },
+    {
+        src: "assets/images/IMG_0833.jpeg",
+        alt: "Precious Moments Chapel by artist Samuel J. Butcher"
+    },
+    {
+        src: "assets/images/IMG_1226.jpeg",
+        alt: "Red panda at the Henry Doorly Zoo"
+    },
+    {
+        src: "assets/images/IMG_1320.jpeg",
+        alt: "Chinese sanctuary garden in California"
+    },
+    {
+        src: "assets/images/IMG_2138.jpeg",
+        alt: "Race cars at Raceway Park of the Midlands"
+    },
+    {
+        src: "assets/images/IMG_2677.jpeg",
+        alt: "Model for a photoshoot"
+    },
+    {
+        src: "assets/images/IMG_6438.jpeg",
+        alt: "Model for a photoshoot"
+    },
+    {
+        src: "assets/images/IMG_2703.jpeg",
+        alt: "Night sky with stars"
+    },
+    {
+        src: "assets/images/IMG_2229.jpeg",
+        alt: "Supra at Raceway Park of the Midlands"
+    },
+    {
+        src: "assets/images/IMG_1326.jpeg",
+        alt: "White flower at the Chinese sanctuary garden in California"
+    }
+];
+
+let currentPhoto = 0;
+
+const slideshowImage = document.getElementById("slideshow-image");
+const photoCounter = document.getElementById("photo-counter");
+
+const previousButton = document.querySelector(".prev-photo");
+const nextButton = document.querySelector(".next-photo");
+
+
+function showPhoto(index) {
+
+    currentPhoto = (index + photos.length) % photos.length;
+
+    slideshowImage.src = photos[currentPhoto].src;
+    slideshowImage.alt = photos[currentPhoto].alt;
+
+    photoCounter.textContent =
+        `${currentPhoto + 1} / ${photos.length}`;
+}
+
+
+if (slideshowImage && photoCounter && previousButton && nextButton) {
+
+    previousButton.addEventListener("click", () => {
+        showPhoto(currentPhoto - 1);
+    });
+
+    nextButton.addEventListener("click", () => {
+        showPhoto(currentPhoto + 1);
+    });
+
+    showPhoto(0);
+}
