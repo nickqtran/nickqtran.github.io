@@ -75,9 +75,9 @@ const photos = [
         caption: "Indoor Portrait Photoshoot"
     },
     {
-        src: "assets/images/IMG_6438.jpeg",
+        src: "assets/images/chrisportrait.jpeg",
         alt: "Model for a photoshoot",
-        caption: "Winter Portrait Photoshoot"
+        caption: "Graduation Photoshoot"
     },
     {
         src: "assets/images/IMG_2703.jpeg",
