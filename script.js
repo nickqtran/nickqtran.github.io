@@ -72,10 +72,10 @@ const photos = [
     {
         src: "assets/images/IMG_2677.jpeg",
         alt: "Model for a photoshoot",
-        caption: "Indoor Portrait Photoshoot"
+        caption: "Birthday Photoshoot"
     },
     {
-        src: "assets/images/chrisportrait (1).jpeg",
+        src: "assets/images/IMG_7502.jpeg",
         alt: "Model for a photoshoot",
         caption: "Graduation Photoshoot"
     },
